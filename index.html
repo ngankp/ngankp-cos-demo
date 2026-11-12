@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c1118'/%3E%3Ccircle cx='32' cy='32' r='15' fill='%23e9b762'/%3E%3Ccircle cx='27' cy='27' r='6' fill='%23fff8e8' opacity='.7'/%3E%3C/svg%3E">
+<title>Chief of Staff · the coach and chief of staff executives get, for you</title>
+<meta name="description" content="An AI chief of staff that clears your admin in the background, and a coach that catches your old habits the moment they kick in. Free beta.">
+<style>
+@font-face{font-family:Spectral;font-weight:300;font-display:swap;src:url(landing/fonts/spectral-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:Spectral;font-weight:400;font-display:swap;src:url(landing/fonts/spectral-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Spectral;font-style:italic;font-weight:400;font-display:swap;src:url(landing/fonts/spectral-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(landing/fonts/inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:500;font-display:swap;src:url(landing/fonts/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(landing/fonts/inter-latin-600-normal.woff2) format("woff2")}
+:root{--ink:#0c1118;--slate:#121924;--raised:#19222f;--bone:#e9e4d8;--mist:#9aa2ad;--fog:#7c8591;--lamp:#e9b762;--kelp:#74cfa5;--heather:#b79cf0;--coral:#e0806f;--steel:#7fa9ee;--line:rgba(233,228,216,.09);--line2:rgba(233,228,216,.18);--serif:Spectral,Georgia,serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-color:#2a3442 var(--ink)}
+body{margin:0;background:var(--ink);color:var(--bone);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+::selection{background:rgba(233,183,98,.32);color:#fff}
+img{max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--lamp);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h1{font-size:clamp(40px,6.4vw,76px);line-height:1.02}
+h2{font-size:clamp(32px,4.2vw,50px);line-height:1.08}
+h3{font-size:24px;line-height:1.25;font-weight:400}
+p{margin:0}
+.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:#cfc9bc;max-width:60ch}
+.muted{color:var(--mist)}.small{font-size:13.5px;color:var(--fog)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--lamp);color:#1a1408;font:600 15px/1 var(--sans);border-radius:999px;padding:14px 22px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s cubic-bezier(.2,.8,.2,1),box-shadow .2s}
+.btn:hover{transform:translateY(-1px);background:#f0c47a}
+.btn.ghost{background:transparent;color:var(--bone);border:1px solid var(--line2);box-shadow:none}
+.btn.ghost:hover{border-color:rgba(233,228,216,.35);background:transparent}
+.btn svg{width:16px;height:16px}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:20;background:rgba(12,17,24,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.mark{display:flex;align-items:center;gap:10px;font:400 19px/1 var(--serif);text-decoration:none}
+.orb{width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff8e8 0,#f2b47c 35%,#e98aa8 70%,#7fa9ee 100%)}
+nav.top .links{display:flex;gap:10px;align-items:center}
+nav.top .links a.t{font-size:14px;color:var(--mist);text-decoration:none;padding:8px 10px}
+nav.top .links a.t:hover{color:var(--bone)}
+nav.top .btn{padding:10px 16px;font-size:14px}
+
+/* hero */
+.hero{position:relative;padding:84px 0 40px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-200px -10% auto;height:760px;background:radial-gradient(600px 380px at 70% 40%,rgba(233,183,98,.16),transparent 70%),radial-gradient(500px 300px at 20% 10%,rgba(127,169,238,.10),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:48px}
+.hero h1 em{font-style:normal;color:var(--lamp)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .note{margin-top:16px}
+.stage{position:relative;margin-top:8px;padding-bottom:40px}
+.laptop{border-radius:16px;border:1px solid var(--line2);background:#0a0e14;padding:10px 10px 0;box-shadow:0 50px 120px -40px rgba(0,0,0,.9);width:86%}
+.laptop .bar{display:flex;gap:6px;padding:2px 4px 10px}.laptop .bar i{width:9px;height:9px;border-radius:50%;background:#2a3442}
+.laptop img{display:block;width:100%;border-radius:8px 8px 0 0}
+.phone{border-radius:38px;border:1px solid var(--line2);background:#06090d;padding:9px;box-shadow:0 40px 90px -30px rgba(0,0,0,.95)}
+.phone img{display:block;width:100%;border-radius:30px}
+.stage .phone{position:absolute;right:0;bottom:0;width:27%;max-width:290px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+section{padding:96px 0}
+.sec-head{max-width:760px;margin-bottom:44px}
+.sec-head p{margin-top:16px}
+
+/* before / after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.week{border:1px solid var(--line);border-radius:24px;padding:24px;background:var(--slate)}
+.week.after{background:linear-gradient(180deg,rgba(233,183,98,.06),rgba(18,25,36,1) 40%);border-color:rgba(233,183,98,.28)}
+.week h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.week h3 small{font:500 12.5px/1 var(--sans);color:var(--fog)}
+.days{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:20px 0 18px}
+.day{display:flex;flex-direction:column;gap:4px}
+.day b{font:500 11.5px/1 var(--sans);color:var(--fog);letter-spacing:.04em;margin-bottom:4px}
+.blk{border-radius:6px;height:var(--h,18px);display:flex;align-items:center;padding:0 6px;font-size:10.5px;line-height:1.15;color:rgba(12,17,24,.9);font-weight:600;overflow:hidden}
+.m{background:#3a4557;color:#c3cad4}.a{background:#4e3a3a;color:#e9c7bf}.f{background:var(--lamp)}.l{background:var(--kelp)}.c{background:var(--heather)}.late{background:var(--coral)}
+.slip{border:1px dashed rgba(224,128,111,.6);background:transparent;color:var(--coral)}
+.legend{display:flex;flex-wrap:wrap;gap:12px 16px;font-size:12.5px;color:var(--mist);margin-bottom:18px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.week ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:15px}
+.week li{display:flex;gap:10px;align-items:flex-start}
+.week li svg{flex:none;width:18px;height:18px;margin-top:3px}
+.before li svg{color:var(--coral)}.after li svg{color:var(--kelp)}
+
+/* feature rows */
+.feat{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.feat.flip{grid-template-columns:.95fr 1.05fr}.feat.flip .shots{order:-1}
+.steps{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:18px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:64px 1fr;gap:14px}
+.steps time{font:500 13px/1.6 var(--sans);color:var(--lamp);font-variant-numeric:tabular-nums;padding-top:2px}
+.steps p{color:#cfc9bc}.steps p b{color:var(--bone);font-weight:600}
+.shots{position:relative;display:flex;gap:18px;justify-content:center;align-items:flex-start}
+.shots .phone{width:min(46%,270px)}.shots .phone:nth-child(2){margin-top:56px}
+.shots .laptop{width:100%}
+.shots .laptop + .phone{position:absolute;right:-12px;bottom:-40px;width:34%;margin:0}
+.quote{font:italic 400 clamp(22px,2.4vw,28px)/1.35 var(--serif);color:var(--bone);margin-top:28px;padding-top:24px;border-top:1px solid var(--line);max-width:34ch}
+.quote span{display:block;font:400 14px/1.4 var(--sans);color:var(--fog);margin-top:10px;font-style:normal}
+
+/* yours */
+.yours{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.panel{background:var(--slate);border:1px solid var(--line);border-radius:24px;padding:26px}
+.panel h3{margin-bottom:10px}.panel p{color:#cfc9bc;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{border:1px solid var(--line2);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--mist)}
+.chip.on{border-color:rgba(233,183,98,.5);color:var(--bone);background:rgba(233,183,98,.08)}
+.dial{margin-top:22px}
+.dial .track{position:relative;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--kelp),var(--lamp),var(--coral))}
+.dial .knob{position:absolute;left:68%;top:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:var(--bone);box-shadow:0 4px 12px rgba(0,0,0,.6)}
+.dial .ends{display:flex;justify-content:space-between;font-size:12.5px;color:var(--fog);margin-top:10px}
+.lock{display:flex;gap:12px;align-items:center;margin-top:18px;padding:12px 14px;border-radius:14px;background:rgba(116,207,165,.08);border:1px solid rgba(116,207,165,.25);font-size:14px}
+.lock svg{flex:none;width:18px;height:18px;color:var(--kelp)}
+
+/* compare */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:15px}
+.cmp th,.cmp td{padding:16px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.cmp thead th{font:500 13px/1.3 var(--sans);color:var(--mist);vertical-align:bottom}
+.cmp tbody th{font-weight:500;color:var(--bone);width:28%}
+.cmp td{color:var(--mist)}
+.cmp .us{background:rgba(233,183,98,.06);color:var(--bone)}
+.cmp thead .us{color:var(--lamp);border-radius:14px 14px 0 0;font-weight:600}
+.cmp tr:last-child .us{border-radius:0 0 14px 14px}
+.yes{color:var(--kelp)}.no{color:var(--fog)}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tw table{min-width:720px}
+
+/* videos */
+.vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.vids figure{margin:0;min-width:0}
+.vids video{width:100%;border-radius:18px;border:1px solid var(--line2);background:#000;display:block}
+.vids figcaption{margin-top:12px}
+.vids.tall{max-width:760px;margin:0 auto}.vids.tall video{max-height:80vh;width:auto;max-width:100%;margin:0 auto}
+.vids figcaption b{font:400 20px/1.3 var(--serif)}
+
+/* beta */
+.beta{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.formcard{background:var(--slate);border:1px solid var(--line2);border-radius:24px;padding:28px}
+form .q{margin:20px 0 6px;font-weight:500}form .q:first-child{margin-top:0}form .h{color:var(--fog);font-size:13.5px;margin:0 0 10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{position:relative;border:1px solid var(--line2);border-radius:999px;padding:8px 14px;font-size:14px;cursor:pointer;color:var(--mist);transition:border-color .15s,color .15s}
+.opts label:hover{color:var(--bone)}
+.opts input{position:absolute;opacity:0;pointer-events:none}
+.opts label:has(input:checked){border-color:var(--lamp);color:var(--bone);background:rgba(233,183,98,.1)}
+.opts label:has(input:focus-visible){outline:2px solid var(--lamp);outline-offset:2px}
+input[type=email],textarea{width:100%;background:var(--ink);border:1px solid var(--line2);border-radius:12px;color:var(--bone);padding:13px 14px;font:inherit;caret-color:var(--lamp)}
+input[type=email]::placeholder{color:#8a929c}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+#done{display:none}
+#done .dq{font:400 26px/1.3 var(--serif);margin-bottom:10px}
+footer{border-top:1px solid var(--line);padding:36px 0 56px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+
+@media (max-width:900px){
+ .ba,.feat,.feat.flip,.yours,.vids,.beta{grid-template-columns:minmax(0,1fr)}
+ .feat{gap:40px}.feat.flip .shots{order:0}
+ .laptop{width:100%}
+ .stage .phone{position:relative;width:52%;margin:-120px 0 0 auto;display:block}
+  section{padding:72px 0}
+ nav.top .links a.t{display:none}
+}
+@media (max-width:520px){
+ .hero{padding-top:52px}
+ .days{gap:4px}.blk{font-size:0;padding:0}
+ .shots .laptop + .phone{right:-4px;bottom:-28px;width:40%}
+ .stage .phone{width:62%;margin-top:-90px}
+  .week{padding:18px}
+ .mark .word{display:none}
+ .tw table{min-width:0}
+ .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:auto}
+ .cmp thead{display:none}
+ .cmp tr{border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin-bottom:12px;background:var(--slate)}
+ .cmp tbody th{width:auto;padding:0 0 10px;border:0;font-family:var(--serif);font-size:19px;font-weight:400}
+ .cmp td{display:grid;grid-template-columns:42% 1fr;gap:10px;padding:7px 0;border:0;font-size:14px}
+ .cmp td:before{content:attr(data-l);color:var(--fog);font-size:12.5px}
+ .cmp td.us{order:-1;background:rgba(233,183,98,.08);border-radius:10px;padding:8px 10px;margin:0 -10px 4px}
+ .cmp tr{display:flex;flex-direction:column}
+ .cmp tbody th{order:-2}
+}
+</style></head><body>
+<nav class="top" aria-label="Main"><div class="wrap">
+ <a class="mark" href="#"><span class="orb" aria-hidden="true"></span><span class="word">Chief of Staff</span></a>
+ <div class="links"><a class="t" href="#how">How it works</a><a class="t" href="#different">Why it's different</a><a class="btn ghost" data-demo href="demo/">Try the demo</a><a class="btn" href="#beta">Join the beta</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+ <div>
+  <h1 id="headline">Busy all week.<br>Your own goals <em>still</em> slip.</h1>
+  <p class="lead" style="margin-top:24px">Executives fix this with a chief of staff and a coach. Now you can too: an AI that clears your admin in the background, and catches your old habits the moment they kick in. For work and the rest of your life.</p>
+  <div class="ctas"><a class="btn" data-demo href="demo/">Try the clickable demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="#beta">Join the free beta</a></div>
+  <p class="small note">Two minutes, no sign-up. Made-up data, runs in your browser.</p>
+ </div>
+ <div class="stage">
+  <div class="laptop"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="landing/desk-today.webp" alt="The Today screen: a plan for the day, what it did while you were busy, and your agenda" width="1920" height="1200"></div>
+  <div class="phone"><img src="landing/phone-nudge.webp" alt="On the phone: a nudge saying it's the third yes today" width="780" height="1688"></div>
+ </div>
+</div></header>
+
+<section id="week" aria-labelledby="week-h"><div class="wrap">
+ <div class="sec-head"><h2 id="week-h">Same job. A different week.</h2><p class="lead">Meet Amara, a Senior Strategy Manager who wants Head of Strategy in 18 months. Here's her week before, and with it. (She's made up. Her week probably isn't.)</p></div>
+ <div class="legend" aria-hidden="true"><span><i class="m" style="background:#3a4557"></i>Meetings</span><span><i style="background:#4e3a3a"></i>Other people's asks</span><span><i style="background:var(--lamp)"></i>Her own big work</span><span><i style="background:var(--heather)"></i>Coaching moment</span><span><i style="background:var(--kelp)"></i>Life</span><span><i style="background:var(--coral)"></i>After 22:00</span></div>
+ <div class="ba">
+  <div class="week before">
+   <h3>Her week now <small>Mon to Fri</small></h3>
+   <div class="days" aria-hidden="true">
+    <div class="day"><b>MON</b><span class="blk m" style="--h:30px">Meetings</span><span class="blk a" style="--h:22px">Update</span><span class="blk m" style="--h:26px"></span><span class="blk a" style="--h:16px"></span></div>
+    <div class="day"><b>TUE</b><span class="blk a" style="--h:26px">Yes</span><span class="blk m" style="--h:34px"></span><span class="blk a" style="--h:16px"></span><span class="blk late" style="--h:16px">23:10</span></div>
+    <div class="day"><b>WED</b><span class="blk m" style="--h:24px"></span><span class="blk a" style="--h:30px">Slides</span><span class="blk m" style="--h:20px"></span><span class="blk late" style="--h:16px">22:40</span></div>
+    <div class="day"><b>THU</b><span class="blk a" style="--h:20px">Yes</span><span class="blk m" style="--h:28px"></span><span class="blk slip" style="--h:22px">Paper?</span><span class="blk a" style="--h:20px">Yes</span></div>
+    <div class="day"><b>FRI</b><span class="blk m" style="--h:26px"></span><span class="blk a" style="--h:24px">Prep</span><span class="blk slip" style="--h:18px">Next wk</span><span class="blk late" style="--h:16px">Mail</span></div>
+   </div>
+   <ul>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Says yes to every Teams ping. The board paper moves to "next week", again.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Fixes other people's slides at 11pm, then sleeps five hours.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Walks into her 1:1 cold, and doesn't ask about the promotion.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Writes the weekly update on Friday night from memory.</li>
+   </ul>
+  </div>
+  <div class="week after">
+   <h3>Her week with it <small>Mon to Fri</small></h3>
+   <div class="days" aria-hidden="true">
+    <div class="day"><b>MON</b><span class="blk f" style="--h:30px">Paper</span><span class="blk m" style="--h:24px"></span><span class="blk m" style="--h:18px"></span><span class="blk l" style="--h:16px">Swim</span></div>
+    <div class="day"><b>TUE</b><span class="blk m" style="--h:26px"></span><span class="blk c" style="--h:20px">Said no</span><span class="blk f" style="--h:26px">Paper</span><span class="blk l" style="--h:16px">Leo</span></div>
+    <div class="day"><b>WED</b><span class="blk f" style="--h:28px">Focus</span><span class="blk m" style="--h:24px"></span><span class="blk a" style="--h:16px"></span><span class="blk l" style="--h:16px">Home</span></div>
+    <div class="day"><b>THU</b><span class="blk f" style="--h:26px">Paper</span><span class="blk c" style="--h:20px">1:1 ask</span><span class="blk c" style="--h:18px">Traded</span><span class="blk l" style="--h:16px">Swim</span></div>
+    <div class="day"><b>FRI</b><span class="blk m" style="--h:22px"></span><span class="blk c" style="--h:20px">Review</span><span class="blk f" style="--h:24px">Sent</span><span class="blk l" style="--h:16px">Off</span></div>
+   </div>
+   <ul>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>10:00 to 11:30 is held for the board paper before she opens her laptop.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>On the third yes, it nudges her. She trades the ask instead of taking it.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Two short nights? The hard thinking moves before 11:00, and her swim stays.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Friday's update is drafted from her own wins. She reads it and hits send.</li>
+   </ul>
+  </div>
+ </div>
+</div></section>
+
+<section id="how" aria-labelledby="coach-h"><div class="wrap feat">
+ <div>
+  <h2 id="coach-h">A coach that catches the moment.</h2>
+  <p class="lead" style="margin-top:16px">Tell it the habit you want to break. It notices when it's happening, and says so kindly, with a better move you can use right now. Not in a report next month.</p>
+  <ol class="steps">
+   <li><time>15:28</time><p><b>Ravi asks her to chair one more review.</b> It's her third yes since lunch, after two late nights.</p></li>
+   <li><time>15:30</time><p><b>It flags it.</b> Three honest options: say "not this week", take it but drop something, or decide it really is hers.</p></li>
+   <li><time>15:31</time><p><b>She sends a reply that trades.</b> Short, with a reason. She edits it so it sounds like her.</p></li>
+   <li><time>Friday</time><p><b>Her pattern, going down.</b> Hero mode: five times a week a month ago, once this week.</p></li>
+  </ol>
+ </div>
+ <div class="shots">
+  <div class="phone"><img src="landing/phone-pattern.webp" alt="The coach shows three yeses since lunch and asks what to do with Ravi's ask" width="780" height="1688"></div>
+  <div class="phone"><img src="landing/phone-growth.webp" alt="Growth shows Hero mode dropping from 5 to 1 over four weeks" width="780" height="1688"></div>
+ </div>
+</div></section>
+
+<section aria-labelledby="cos-h" style="padding-top:24px"><div class="wrap feat flip">
+ <div class="shots">
+  <div class="laptop"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="landing/desk-friday.webp" alt="Friday review: wins, a line for the weekly update and next week's plan" width="1920" height="1200"></div>
+  <div class="phone"><img src="landing/phone-busy.webp" alt="While you were busy: drafted update, moved tasks, held focus time, each with Keep or Undo" width="780" height="1688"></div>
+ </div>
+ <div>
+  <h2 id="cos-h">A chief of staff that clears the admin first.</h2>
+  <p class="lead" style="margin-top:16px">It works in the background, so you have room for the work that gets you promoted. No prompts to write. You just keep or undo.</p>
+  <ol class="steps">
+   <li><time>08:20</time><p><b>Before you start:</b> update drafted, two tasks moved, focus time held, a lunchtime "quick sync" declined for you to approve.</p></li>
+   <li><time>13:45</time><p><b>Before the 1:1:</b> notes from your last three, turned into one clear ask.</p></li>
+   <li><time>09:45</time><p><b>After the meeting:</b> actions drafted with owners and dates. Nothing lands on anyone's list without you.</p></li>
+   <li><time>Friday</time><p><b>Your week, written down:</b> wins sorted, update drafted, next week's plan ready for Monday.</p></li>
+  </ol>
+  <div class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Anything other people would see stays a draft until you approve it.</div>
+ </div>
+</div></section>
+
+<section aria-labelledby="yours-h"><div class="wrap">
+ <div class="sec-head"><h2 id="yours-h">Yours, all the way.</h2><p class="lead">It fits your tools, your AI and how you like to be coached. The more it knows, the sharper it gets, and you can see and edit everything it remembers.</p></div>
+ <div class="yours">
+  <div class="panel"><h3>Bring your own stack</h3><p>Plugs into the calendar, notes, tasks and chat you already use. Nothing to migrate.</p>
+   <div class="chips"><span class="chip on">Outlook</span><span class="chip">Google Calendar</span><span class="chip on">Teams</span><span class="chip">Slack</span><span class="chip on">Asana</span><span class="chip">Notion</span><span class="chip on">OneNote</span><span class="chip">SharePoint</span><span class="chip">Apple Health, optional</span></div></div>
+  <div class="panel"><h3>Bring your own AI</h3><p>Use the AI account you already pay for. Or, if privacy matters, run an open model on your own laptop or server.</p>
+   <div class="chips"><span class="chip on">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">Mistral</span><span class="chip on">Self-hosted open model</span></div></div>
+  <div class="panel"><h3>Coached your way</h3><p>Gentle or blunt. Brief or detailed. Or "like the best manager I ever had". You set it, and it checks in monthly.</p>
+   <div class="dial" aria-hidden="true"><div class="track"><span class="knob"></span></div><div class="ends"><span>Gentle</span><span>Direct</span><span>Blunt</span></div></div></div>
+ </div>
+</div></section>
+
+<section id="different" aria-labelledby="diff-h"><div class="wrap">
+ <div class="sec-head"><h2 id="diff-h">Not another planner.</h2><p class="lead">Planners and AI note apps organise what you put in. A human coach sees you once a month. This is with you the moment it matters.</p></div>
+ <div class="tw"><table class="cmp">
+  <thead><tr><th></th><th>Planners and to-do apps</th><th>AI note and inbox assistants</th><th>A human executive coach</th><th class="us">This</th></tr></thead>
+  <tbody>
+   <tr><th>Starts the work without being asked</th><td class="no">No</td><td>Daily plan and reminders</td><td class="no">No</td><td class="us yes">Drafts, preps and holds time, with Keep and Undo</td></tr>
+   <tr><th>Catches your habits as they happen</th><td class="no">No</td><td class="no">No</td><td>Looks back, monthly</td><td class="us yes">In the moment</td></tr>
+   <tr><th>Career and life together</th><td class="no">Tasks only</td><td>Mostly work tasks</td><td>Yes</td><td class="us yes">Sleep, energy and home shape the plan</td></tr>
+   <tr><th>Your tools, your AI</th><td>Some integrations</td><td>Their AI, or your API key</td><td class="no">n/a</td><td class="us yes">Your AI, or a model you host</td></tr>
+   <tr><th>Cost</th><td>Free to about $10 a month</td><td>Free to about $20 a month</td><td>Hundreds an hour</td><td class="us">Free in the beta</td></tr>
+  </tbody>
+ </table></div>
+</div></section>
+
+<section id="watch" data-hosted-only aria-labelledby="watch-h" style="padding-top:24px"><div class="wrap">
+ <div class="sec-head"><h2 id="watch-h">Watch Amara's week in a minute.</h2></div>
+ <div class="vids">
+  <figure><video controls preload="metadata" playsinline data-v="coach" poster="landing/desk-pattern.webp" src="videos/amara-coach-desktop.mp4"></video><figcaption><b>The coach</b><p class="small">The third yes, a better reply, and a pattern going down.</p></figcaption></figure>
+  <figure><video controls preload="metadata" playsinline data-v="chief-of-staff" poster="landing/desk-today.webp" src="videos/amara-chief-of-staff-desktop.mp4"></video><figcaption><b>The chief of staff</b><p class="small">Admin done before she starts, 1:1 prep, actions and the Friday update.</p></figcaption></figure>
+ </div>
+</div></section>
+
+<section id="beta" aria-labelledby="beta-h"><div class="wrap beta">
+ <div>
+  <h2 id="beta-h">Get your own chief of staff and coach.</h2>
+  <p class="lead" style="margin-top:16px">We're opening a small free beta for people in mid to senior roles who want the next step at work without giving up the rest of their life. Three quick questions.</p>
+  <div class="row"><a class="btn ghost" data-demo href="demo/">Try the demo first</a></div>
+ </div>
+ <div class="formcard">
+<form id="f" novalidate>
+<p class="q">How much does "busy all week, own goals slipping" sound like you?</p>
+<p class="h">1 means not really. 5 means this is my week.</p>
+<div class="opts" role="radiogroup"><label><input type="radio" name="pain" value="1">1 · Not me</label><label><input type="radio" name="pain" value="2">2</label><label><input type="radio" name="pain" value="3">3</label><label><input type="radio" name="pain" value="4">4</label><label><input type="radio" name="pain" value="5">5 · That&#39;s me</label></div>
+<p class="q">What would you want it to take off your plate first?</p>
+<p class="h">Pick up to two.</p>
+<div class="opts"><label><input type="checkbox" name="plate" value="Prepping for meetings">Prepping for meetings</label><label><input type="checkbox" name="plate" value="Status updates and admin">Status updates and admin</label><label><input type="checkbox" name="plate" value="Planning my week">Planning my week</label><label><input type="checkbox" name="plate" value="Saying no without guilt">Saying no without guilt</label><label><input type="checkbox" name="plate" value="Getting ready for a promotion">Getting ready for a promotion</label><label><input type="checkbox" name="plate" value="Sleep, energy and switching off">Sleep, energy and switching off</label><label><input type="checkbox" name="plate" value="Speaking up with senior people">Speaking up with senior people</label></div>
+<p class="q">Your email</p>
+<p class="h">We'll only email about the beta. Leave any time.</p>
+<input type="email" name="email" placeholder="you@example.com" aria-label="Email" autocomplete="email">
+<p id="err" class="small" style="color:#e58a6b;display:none;margin-top:10px"></p>
+<div class="row"><button class="btn" type="submit">Join the beta</button></div>
+</form>
+<div id="done"><p class="dq" id="doneMsg"></p><p class="small" id="doneHint"></p><div class="row" id="doneRow"></div></div>
+ </div>
+</div></section>
+
+<footer><div class="wrap"><span class="small">Prototype stage. The demo uses made-up data and runs only in your browser. Live AI, integrations and self-hosting are coming in the beta.</span><a class="small" href="#beta">Join the beta</a></div></footer>
+<script>
+/* Where "Try the demo" goes. Hosted: "demo/". */
+const DEMO_URL = "demo/";
+document.querySelectorAll("[data-demo]").forEach(a => a.href = DEMO_URL);
+/* Headline test: ?h=2 or ?h=3 */
+const H = { "2": "The coach and chief of staff executives get. <em>Now for you.</em>", "3": "Stop saying yes to everything. <em>Start getting promoted.</em>" };
+const hv = new URLSearchParams(location.search).get("h");
+if (H[hv]) document.getElementById("headline").innerHTML = H[hv];
+const cols = [...document.querySelectorAll(".cmp thead th")].map(t => t.textContent);
+document.querySelectorAll(".cmp tbody tr").forEach(r => r.querySelectorAll("td").forEach((td, i) => td.dataset.l = cols[i + 1]));
+if (matchMedia("(max-width: 640px)").matches) {
+  document.querySelector(".vids")?.classList.add("tall");
+  document.querySelectorAll("video[data-v]").forEach(v => { v.src = `videos/amara-${v.dataset.v}-phone.mp4`; v.poster = v.dataset.v === "coach" ? "landing/phone-pattern.webp" : "landing/phone-busy.webp"; });
+}
+/* Set to a Tally or Google Form link to collect sign-ups. */
+const BETA_FORM_URL = "";
+const f=document.getElementById("f"),err=document.getElementById("err");
+f.addEventListener("change",e=>{if(e.target.name==="plate"){const c=f.querySelectorAll("input[name=plate]:checked");if(c.length>2)e.target.checked=false}});
+f.addEventListener("submit",async e=>{e.preventDefault();
+ const pain=f.querySelector("input[name=pain]:checked")?.value,plate=[...f.querySelectorAll("input[name=plate]:checked")].map(x=>x.value),email=f.email.value.trim();
+ if(!pain){err.textContent="Pick a number from 1 to 5 first.";err.style.display="block";return}
+ if(email&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent="That email doesn't look right.";err.style.display="block";return}
+ err.style.display="none";
+ const text=`How much this sounds like me: ${pain}/5\nTake off my plate first: ${plate.join(", ")||"-"}\nBeta email: ${email||"not now"}`;
+ const ok=await (navigator.clipboard?navigator.clipboard.writeText(text).then(()=>true,()=>false):Promise.resolve(false));
+ f.style.display="none";document.getElementById("done").style.display="block";
+ document.getElementById("doneMsg").textContent=email?"Almost there. One step left.":"Thank you. This shapes what gets built next.";
+ const hint=document.getElementById("doneHint"),row=document.getElementById("doneRow");
+ if(BETA_FORM_URL){hint.textContent=ok?"Your answers are copied. Paste them into the sign-up form to finish.":"Open the sign-up form to finish.";row.innerHTML=`<a class="btn" target="_blank" rel="noreferrer" href="${BETA_FORM_URL}">Open the sign-up form</a>`}
+ else if(ok){hint.textContent="Your answers are copied. Paste them into a message to whoever shared this with you."}
+ else{hint.textContent="Copy your answers below and send them to whoever shared this with you.";const t=document.createElement("textarea");t.readOnly=true;t.rows=4;t.value=text;t.setAttribute("aria-label","Your answers");row.appendChild(t)}
+});
+</script></body></html>
