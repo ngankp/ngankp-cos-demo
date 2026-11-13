@@ -172,27 +172,56 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
  .cmp tr{display:flex;flex-direction:column}
  .cmp tbody th{order:-2}
 }
+
+/* round 4: lighter hero, cropped cards, data, tabs */
+.hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center}
+.hero-phone{position:relative;justify-self:center;width:min(100%,330px)}
+.hero-phone .phone{width:100%}
+.done{position:absolute;display:flex;align-items:center;gap:8px;background:rgba(25,34,47,.92);backdrop-filter:blur(8px);border:1px solid var(--line2);border-radius:999px;padding:9px 14px;font-size:13.5px;box-shadow:0 18px 40px -14px rgba(0,0,0,.8);white-space:nowrap}
+.done svg{width:15px;height:15px;color:var(--kelp);flex:none}
+.done.d1{left:-36%;top:30%}.done.d2{right:-24%;top:73%}.done.d3{left:-28%;top:56%}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--slate);border:1px solid var(--line);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.card .crop{border-radius:16px;overflow:hidden;background:#0c1118;border:1px solid var(--line)}
+.card .crop img{display:block;width:100%}
+.card .k{font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--lamp)}
+.card p{color:#cfc9bc;font-size:15px}
+.card .imgs{display:grid;gap:10px}
+.promises{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:p}
+.promises li{background:var(--slate);border:1px solid var(--line);border-radius:20px;padding:18px;counter-increment:p}
+.promises li:before{content:counter(p);display:block;font:400 26px/1 var(--serif);color:var(--lamp);margin-bottom:10px}
+.promises b{display:block;font-weight:600;margin-bottom:4px}.promises span{color:var(--mist);font-size:14px}
+.tabs{display:inline-flex;border:1px solid var(--line2);border-radius:999px;padding:4px;margin-bottom:22px}
+.tabs button{background:transparent;border:0;color:var(--mist);font:500 14px/1 var(--sans);padding:10px 16px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected=true]{background:rgba(233,228,216,.08);color:var(--bone)}
+textarea{min-height:120px;resize:vertical}
+.cmp td.yes,.cmp td.no{font-weight:500}
+footer a.note{color:var(--mist)}
+@media (max-width:900px){.hero .wrap,.cards{grid-template-columns:minmax(0,1fr)}.promises{grid-template-columns:repeat(2,minmax(0,1fr))}.done.d1{left:-18%}.done.d2{right:-14%}.done.d3{left:-12%}}
+@media (max-width:520px){.hero-phone{width:68%}.done{font-size:12px;padding:7px 11px}.done.d1{left:-30%}.done.d2{right:-30%}.done.d3{left:-26%}.promises{grid-template-columns:minmax(0,1fr)}}
 </style></head><body>
 <nav class="top" aria-label="Main"><div class="wrap">
  <a class="mark" href="#"><span class="orb" aria-hidden="true"></span><span class="word">Chief of Staff</span></a>
- <div class="links"><a class="t" href="#how">How it works</a><a class="t" href="#different">Why it's different</a><a class="btn ghost" data-demo href="demo/">Try the demo</a><a class="btn" href="#beta">Join the beta</a></div>
+ <div class="links"><a class="t" href="#how">How it works</a><a class="t" href="#data">Your data</a><a class="btn ghost" data-demo href="demo/">Try the demo</a><a class="btn" href="#beta">Join the beta</a></div>
 </div></nav>
 
 <header class="hero"><div class="wrap">
  <div>
   <h1 id="headline">Busy all week.<br>Your own goals <em>still</em> slip.</h1>
-  <p class="lead" style="margin-top:24px">Executives fix this with a chief of staff and a coach. Now you can too: an AI that clears your admin in the background, and catches your old habits the moment they kick in. For work and the rest of your life.</p>
-  <div class="ctas"><a class="btn" data-demo href="demo/">Try the clickable demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="#beta">Join the free beta</a></div>
-  <p class="small note">Two minutes, no sign-up. Made-up data, runs in your browser.</p>
+  <p class="lead" style="margin-top:24px">An AI chief of staff clears your admin. A coach catches old habits as they happen. For work and the rest of your life.</p>
+  <div class="ctas"><a class="btn" data-demo href="demo/">Try the demo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn ghost" href="#beta">Join the free beta</a></div>
+  <p class="small note">Two minutes. No sign-up. Sample data only.</p>
  </div>
- <div class="stage">
-  <div class="laptop"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="landing/desk-today.webp" alt="The Today screen: a plan for the day, what it did while you were busy, and your agenda" width="1920" height="1200"></div>
-  <div class="phone"><img src="landing/phone-nudge.webp" alt="On the phone: a nudge saying it's the third yes today" width="780" height="1688"></div>
+ <div class="hero-phone">
+  <div class="phone"><img src="landing/phone-nudge.webp" alt="A nudge on the phone: that's the third yes today, want a way out of this one?" width="780" height="1688"></div>
+  <span class="done d1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Update drafted</span>
+  <span class="done d2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Focus time held</span>
+  <span class="done d3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Swim booked</span>
  </div>
 </div></header>
 
 <section id="week" aria-labelledby="week-h"><div class="wrap">
- <div class="sec-head"><h2 id="week-h">Same job. A different week.</h2><p class="lead">Meet Amara, a Senior Strategy Manager who wants Head of Strategy in 18 months. Here's her week before, and with it. (She's made up. Her week probably isn't.)</p></div>
+ <div class="sec-head"><h2 id="week-h">Same job. A different week.</h2><p class="lead">Meet Amara. She wants Head of Strategy in 18 months. She's made up. Her week probably isn't.</p></div>
  <div class="legend" aria-hidden="true"><span><i class="m" style="background:#3a4557"></i>Meetings</span><span><i style="background:#4e3a3a"></i>Other people's asks</span><span><i style="background:var(--lamp)"></i>Her own big work</span><span><i style="background:var(--heather)"></i>Coaching moment</span><span><i style="background:var(--kelp)"></i>Life</span><span><i style="background:var(--coral)"></i>After 22:00</span></div>
  <div class="ba">
   <div class="week before">
@@ -205,10 +234,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     <div class="day"><b>FRI</b><span class="blk m" style="--h:26px"></span><span class="blk a" style="--h:24px">Prep</span><span class="blk slip" style="--h:18px">Next wk</span><span class="blk late" style="--h:16px">Mail</span></div>
    </div>
    <ul>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Says yes to every Teams ping. The board paper moves to "next week", again.</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Fixes other people's slides at 11pm, then sleeps five hours.</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Walks into her 1:1 cold, and doesn't ask about the promotion.</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Writes the weekly update on Friday night from memory.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Says yes to every ask. The board paper slips again.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Fixes other people's slides at 11pm. Sleeps five hours.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>Writes Friday's update from memory.</li>
    </ul>
   </div>
   <div class="week after">
@@ -221,109 +249,104 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
     <div class="day"><b>FRI</b><span class="blk m" style="--h:22px"></span><span class="blk c" style="--h:20px">Review</span><span class="blk f" style="--h:24px">Sent</span><span class="blk l" style="--h:16px">Off</span></div>
    </div>
    <ul>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>10:00 to 11:30 is held for the board paper before she opens her laptop.</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>On the third yes, it nudges her. She trades the ask instead of taking it.</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Two short nights? The hard thinking moves before 11:00, and her swim stays.</li>
-    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Friday's update is drafted from her own wins. She reads it and hits send.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Her board paper time is held before she starts.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>On the third yes, a nudge. She trades instead.</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Short nights move the hard work earlier. Her swims stay.</li>
    </ul>
   </div>
  </div>
 </div></section>
 
-<section id="how" aria-labelledby="coach-h"><div class="wrap feat">
- <div>
-  <h2 id="coach-h">A coach that catches the moment.</h2>
-  <p class="lead" style="margin-top:16px">Tell it the habit you want to break. It notices when it's happening, and says so kindly, with a better move you can use right now. Not in a report next month.</p>
-  <ol class="steps">
-   <li><time>15:28</time><p><b>Ravi asks her to chair one more review.</b> It's her third yes since lunch, after two late nights.</p></li>
-   <li><time>15:30</time><p><b>It flags it.</b> Three honest options: say "not this week", take it but drop something, or decide it really is hers.</p></li>
-   <li><time>15:31</time><p><b>She sends a reply that trades.</b> Short, with a reason. She edits it so it sounds like her.</p></li>
-   <li><time>Friday</time><p><b>Her pattern, going down.</b> Hero mode: five times a week a month ago, once this week.</p></li>
-  </ol>
- </div>
- <div class="shots">
-  <div class="phone"><img src="landing/phone-pattern.webp" alt="The coach shows three yeses since lunch and asks what to do with Ravi's ask" width="780" height="1688"></div>
-  <div class="phone"><img src="landing/phone-growth.webp" alt="Growth shows Hero mode dropping from 5 to 1 over four weeks" width="780" height="1688"></div>
+<section id="how" aria-labelledby="how-h"><div class="wrap">
+ <div class="sec-head"><h2 id="how-h">One quiet app. Three jobs.</h2><p class="lead">It does the admin, speaks up at the right moment, and keeps your life in the picture.</p></div>
+ <div class="cards">
+  <div class="card"><span class="k">Chief of staff</span><h3>The admin is done before you start.</h3><div class="imgs"><div class="crop"><img src="landing/card-busy.webp" alt="While you were busy: 3 done, 1 needs your OK" width="734" height="310"></div></div><p>Keep or undo with one tap. Anything others will see waits for your OK.</p></div>
+  <div class="card"><span class="k">Coach</span><h3>It catches the moment.</h3><div class="imgs"><div class="crop"><img src="landing/card-pattern.webp" alt="Hero mode: you're about to pick up a third fire. Show me a way out." width="734" height="356"></div><div class="crop"><img src="landing/card-growth.webp" alt="Hero mode down from 5 a week to 2" width="734" height="262"></div></div><p>Name the habit you want to break. It flags it kindly, as it happens.</p></div>
+  <div class="card"><span class="k">Life</span><h3>Work and life, side by side.</h3><div class="imgs"><div class="crop"><img src="landing/card-glance.webp" alt="This week: work goals 3 of 5, life goals 2 of 4" width="734" height="488"></div><div class="crop"><img src="landing/card-life.webp" alt="Life goals this week: swim twice, home for bedtime, lunch away from the desk" width="734" height="438"></div></div><p>Sleep, movement and mood from the apps you already use, if you want.</p></div>
  </div>
 </div></section>
 
-<section aria-labelledby="cos-h" style="padding-top:24px"><div class="wrap feat flip">
- <div class="shots">
-  <div class="laptop"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="landing/desk-friday.webp" alt="Friday review: wins, a line for the weekly update and next week's plan" width="1920" height="1200"></div>
-  <div class="phone"><img src="landing/phone-busy.webp" alt="While you were busy: drafted update, moved tasks, held focus time, each with Keep or Undo" width="780" height="1688"></div>
- </div>
- <div>
-  <h2 id="cos-h">A chief of staff that clears the admin first.</h2>
-  <p class="lead" style="margin-top:16px">It works in the background, so you have room for the work that gets you promoted. No prompts to write. You just keep or undo.</p>
-  <ol class="steps">
-   <li><time>08:20</time><p><b>Before you start:</b> update drafted, two tasks moved, focus time held, a lunchtime "quick sync" declined for you to approve.</p></li>
-   <li><time>13:45</time><p><b>Before the 1:1:</b> notes from your last three, turned into one clear ask.</p></li>
-   <li><time>09:45</time><p><b>After the meeting:</b> actions drafted with owners and dates. Nothing lands on anyone's list without you.</p></li>
-   <li><time>Friday</time><p><b>Your week, written down:</b> wins sorted, update drafted, next week's plan ready for Monday.</p></li>
-  </ol>
-  <div class="lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Anything other people would see stays a draft until you approve it.</div>
- </div>
-</div></section>
-
-<section aria-labelledby="yours-h"><div class="wrap">
- <div class="sec-head"><h2 id="yours-h">Yours, all the way.</h2><p class="lead">It fits your tools, your AI and how you like to be coached. The more it knows, the sharper it gets, and you can see and edit everything it remembers.</p></div>
+<section aria-labelledby="yours-h" style="padding-top:24px"><div class="wrap">
+ <div class="sec-head"><h2 id="yours-h">Yours, all the way.</h2></div>
  <div class="yours">
-  <div class="panel"><h3>Bring your own stack</h3><p>Plugs into the calendar, notes, tasks and chat you already use. Nothing to migrate.</p>
-   <div class="chips"><span class="chip on">Outlook</span><span class="chip">Google Calendar</span><span class="chip on">Teams</span><span class="chip">Slack</span><span class="chip on">Asana</span><span class="chip">Notion</span><span class="chip on">OneNote</span><span class="chip">SharePoint</span><span class="chip">Apple Health, optional</span></div></div>
-  <div class="panel"><h3>Bring your own AI</h3><p>Use the AI account you already pay for. Or, if privacy matters, run an open model on your own laptop or server.</p>
-   <div class="chips"><span class="chip on">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">Mistral</span><span class="chip on">Self-hosted open model</span></div></div>
-  <div class="panel"><h3>Coached your way</h3><p>Gentle or blunt. Brief or detailed. Or "like the best manager I ever had". You set it, and it checks in monthly.</p>
-   <div class="dial" aria-hidden="true"><div class="track"><span class="knob"></span></div><div class="ends"><span>Gentle</span><span>Direct</span><span>Blunt</span></div></div></div>
+  <div class="panel"><h3>Your tools</h3><p>Works with the calendar, notes, tasks and chat you already use.</p>
+   <div class="chips"><span class="chip on">Outlook</span><span class="chip">Google</span><span class="chip on">Teams</span><span class="chip">Slack</span><span class="chip on">Asana</span><span class="chip">Notion</span></div></div>
+  <div class="panel"><h3>Your AI</h3><p>Use the AI you already pay for, or run an open model yourself.</p>
+   <div class="chips"><span class="chip on">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">Self-hosted</span></div></div>
+  <div class="panel"><h3>Your wellbeing, optional</h3><p>Off until you turn it on. General coaching, not medical advice.</p>
+   <div class="chips"><span class="chip on">Apple Health</span><span class="chip">Health Connect</span><span class="chip">Oura</span><span class="chip">Garmin</span><span class="chip">Strava</span><span class="chip">Calm</span></div></div>
  </div>
 </div></section>
 
 <section id="different" aria-labelledby="diff-h"><div class="wrap">
- <div class="sec-head"><h2 id="diff-h">Not another planner.</h2><p class="lead">Planners and AI note apps organise what you put in. A human coach sees you once a month. This is with you the moment it matters.</p></div>
+ <div class="sec-head"><h2 id="diff-h">Not another planner.</h2></div>
  <div class="tw"><table class="cmp">
-  <thead><tr><th></th><th>Planners and to-do apps</th><th>AI note and inbox assistants</th><th>A human executive coach</th><th class="us">This</th></tr></thead>
+  <thead><tr><th></th><th>To-do apps</th><th>AI note apps</th><th>A human coach</th><th class="us">This</th></tr></thead>
   <tbody>
-   <tr><th>Starts the work without being asked</th><td class="no">No</td><td>Daily plan and reminders</td><td class="no">No</td><td class="us yes">Drafts, preps and holds time, with Keep and Undo</td></tr>
-   <tr><th>Catches your habits as they happen</th><td class="no">No</td><td class="no">No</td><td>Looks back, monthly</td><td class="us yes">In the moment</td></tr>
-   <tr><th>Career and life together</th><td class="no">Tasks only</td><td>Mostly work tasks</td><td>Yes</td><td class="us yes">Sleep, energy and home shape the plan</td></tr>
-   <tr><th>Your tools, your AI</th><td>Some integrations</td><td>Their AI, or your API key</td><td class="no">n/a</td><td class="us yes">Your AI, or a model you host</td></tr>
-   <tr><th>Cost</th><td>Free to about $10 a month</td><td>Free to about $20 a month</td><td>Hundreds an hour</td><td class="us">Free in the beta</td></tr>
+   <tr><th>Does the admin for you</th><td class="no">No</td><td>Some</td><td class="no">No</td><td class="us yes">Yes, you approve</td></tr>
+   <tr><th>Catches habits as they happen</th><td class="no">No</td><td class="no">No</td><td>Monthly</td><td class="us yes">In the moment</td></tr>
+   <tr><th>Work and life together</th><td class="no">No</td><td class="no">No</td><td>Yes</td><td class="us yes">Yes</td></tr>
+   <tr><th>Your own AI</th><td class="no">No</td><td>Some</td><td class="no">n/a</td><td class="us yes">Yes, or self-hosted</td></tr>
   </tbody>
  </table></div>
+</div></section>
+
+<section id="data" aria-labelledby="data-h" style="padding-top:24px"><div class="wrap">
+ <div class="sec-head"><h2 id="data-h">Your data, in five lines.</h2></div>
+ <ol class="promises">
+  <li><b>You choose what goes in.</b><span>Work, life or both. Health is off until you turn it on.</span></li>
+  <li><b>Only your AI sees it.</b><span>It goes to the AI you picked, and nowhere else.</span></li>
+  <li><b>Never sold or used for training.</b><span>Not by us, and not to train any model.</span></li>
+  <li><b>See, edit, export or delete.</b><span>Everything, at any time.</span></li>
+  <li><b>Coaching, not medical advice.</b><span>For health questions, talk to a professional.</span></li>
+ </ol>
 </div></section>
 
 <section id="watch" data-hosted-only aria-labelledby="watch-h" style="padding-top:24px"><div class="wrap">
  <div class="sec-head"><h2 id="watch-h">Watch Amara's week in a minute.</h2></div>
  <div class="vids">
-  <figure><video controls preload="metadata" playsinline data-v="coach" poster="landing/desk-pattern.webp" src="videos/amara-coach-desktop.mp4"></video><figcaption><b>The coach</b><p class="small">The third yes, a better reply, and a pattern going down.</p></figcaption></figure>
-  <figure><video controls preload="metadata" playsinline data-v="chief-of-staff" poster="landing/desk-today.webp" src="videos/amara-chief-of-staff-desktop.mp4"></video><figcaption><b>The chief of staff</b><p class="small">Admin done before she starts, 1:1 prep, actions and the Friday update.</p></figcaption></figure>
+  <figure><video controls preload="metadata" playsinline data-v="coach" poster="landing/poster-coach-desktop.webp" src="videos/amara-coach-desktop.mp4"></video><figcaption><b>The coach</b><p class="small">The third yes, a better reply, and a pattern going down.</p></figcaption></figure>
+  <figure><video controls preload="metadata" playsinline data-v="chief-of-staff" poster="landing/poster-chief-of-staff-desktop.webp" src="videos/amara-chief-of-staff-desktop.mp4"></video><figcaption><b>The chief of staff</b><p class="small">Admin done before she starts, 1:1 prep, actions and the Friday update.</p></figcaption></figure>
  </div>
 </div></section>
 
 <section id="beta" aria-labelledby="beta-h"><div class="wrap beta">
  <div>
   <h2 id="beta-h">Get your own chief of staff and coach.</h2>
-  <p class="lead" style="margin-top:16px">We're opening a small free beta for people in mid to senior roles who want the next step at work without giving up the rest of their life. Three quick questions.</p>
+  <p class="lead" style="margin-top:16px">A small, free beta for people in mid to senior roles. Or just tell us what you think.</p>
   <div class="row"><a class="btn ghost" data-demo href="demo/">Try the demo first</a></div>
  </div>
  <div class="formcard">
+  <div class="tabs" role="tablist" aria-label="What would you like to do?"><button type="button" role="tab" aria-selected="true" data-tab="beta">Join the beta</button><button type="button" role="tab" aria-selected="false" data-tab="feedback">Send feedback</button></div>
 <form id="f" novalidate>
-<p class="q">How much does "busy all week, own goals slipping" sound like you?</p>
-<p class="h">1 means not really. 5 means this is my week.</p>
-<div class="opts" role="radiogroup"><label><input type="radio" name="pain" value="1">1 · Not me</label><label><input type="radio" name="pain" value="2">2</label><label><input type="radio" name="pain" value="3">3</label><label><input type="radio" name="pain" value="4">4</label><label><input type="radio" name="pain" value="5">5 · That&#39;s me</label></div>
-<p class="q">What would you want it to take off your plate first?</p>
-<p class="h">Pick up to two.</p>
-<div class="opts"><label><input type="checkbox" name="plate" value="Prepping for meetings">Prepping for meetings</label><label><input type="checkbox" name="plate" value="Status updates and admin">Status updates and admin</label><label><input type="checkbox" name="plate" value="Planning my week">Planning my week</label><label><input type="checkbox" name="plate" value="Saying no without guilt">Saying no without guilt</label><label><input type="checkbox" name="plate" value="Getting ready for a promotion">Getting ready for a promotion</label><label><input type="checkbox" name="plate" value="Sleep, energy and switching off">Sleep, energy and switching off</label><label><input type="checkbox" name="plate" value="Speaking up with senior people">Speaking up with senior people</label></div>
+<div data-for="beta">
 <p class="q">Your email</p>
-<p class="h">We'll only email about the beta. Leave any time.</p>
-<input type="email" name="email" placeholder="you@example.com" aria-label="Email" autocomplete="email">
-<p id="err" class="small" style="color:#e58a6b;display:none;margin-top:10px"></p>
-<div class="row"><button class="btn" type="submit">Join the beta</button></div>
+<p class="h">Beta emails only. Leave any time.</p>
+<input type="email" name="email" placeholder="you@example.com" aria-label="Your email" autocomplete="email">
+<p class="q">How much does this sound like your week?</p>
+<p class="h">Optional.</p>
+<div class="opts" role="radiogroup" aria-label="How much does this sound like your week?"><label><input type="radio" name="pain" value="1">1 · Not me</label><label><input type="radio" name="pain" value="2">2</label><label><input type="radio" name="pain" value="3">3</label><label><input type="radio" name="pain" value="4">4</label><label><input type="radio" name="pain" value="5">5 · That&#39;s me</label></div>
+<p class="q">What should it take off your plate first?</p>
+<p class="h">Optional. Pick up to two.</p>
+<div class="opts"><label><input type="checkbox" name="plate" value="Meeting prep">Meeting prep</label><label><input type="checkbox" name="plate" value="Status updates and admin">Status updates and admin</label><label><input type="checkbox" name="plate" value="Planning my week">Planning my week</label><label><input type="checkbox" name="plate" value="Saying no">Saying no</label><label><input type="checkbox" name="plate" value="Getting promoted">Getting promoted</label><label><input type="checkbox" name="plate" value="Sleep and energy">Sleep and energy</label></div>
+</div>
+<div data-for="feedback" hidden>
+<p class="q">What worked, what didn&#39;t, what&#39;s missing?</p>
+<textarea name="note" aria-label="Your feedback" placeholder="I&#39;d want it to…"></textarea>
+<p class="q">Your email</p>
+<p class="h">Optional. Only if you&#39;d like a reply.</p>
+<input type="email" name="reply" placeholder="you@example.com" aria-label="Your email for a reply" autocomplete="email">
+</div>
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+<p id="err" class="small" role="alert" style="color:#e58a6b;display:none;margin-top:10px"></p>
+<div class="row"><button class="btn" type="submit" id="sendBtn">Join the beta</button></div>
+<p class="small" style="margin-top:12px">Goes straight to Ngan, who made this.</p>
 </form>
-<div id="done"><p class="dq" id="doneMsg"></p><p class="small" id="doneHint"></p><div class="row" id="doneRow"></div></div>
+<div id="done" role="status"><p class="dq" id="doneMsg"></p><p class="small" id="doneHint"></p><div class="row" id="doneRow"></div></div>
  </div>
 </div></section>
 
-<footer><div class="wrap"><span class="small">Prototype stage. The demo uses made-up data and runs only in your browser. Live AI, integrations and self-hosting are coming in the beta.</span><a class="small" href="#beta">Join the beta</a></div></footer>
+<footer><div class="wrap"><span class="small">A prototype with sample data. Live AI and integrations come with the beta.</span><span class="small">Made by Ngan. Questions or ideas? <a class="note" href="#beta" data-open="feedback">Send a note</a>.</span></div></footer>
 <script>
 /* Where "Try the demo" goes. Hosted: "demo/". */
 const DEMO_URL = "demo/";
@@ -336,24 +359,62 @@ const cols = [...document.querySelectorAll(".cmp thead th")].map(t => t.textCont
 document.querySelectorAll(".cmp tbody tr").forEach(r => r.querySelectorAll("td").forEach((td, i) => td.dataset.l = cols[i + 1]));
 if (matchMedia("(max-width: 640px)").matches) {
   document.querySelector(".vids")?.classList.add("tall");
-  document.querySelectorAll("video[data-v]").forEach(v => { v.src = `videos/amara-${v.dataset.v}-phone.mp4`; v.poster = v.dataset.v === "coach" ? "landing/phone-pattern.webp" : "landing/phone-busy.webp"; });
+  document.querySelectorAll("video[data-v]").forEach(v => { v.poster = `landing/poster-${v.dataset.v}-phone.webp`; v.src = `videos/amara-${v.dataset.v}-phone.mp4`; });
 }
-/* Set to a Tally or Google Form link to collect sign-ups. */
-const BETA_FORM_URL = "";
-const f=document.getElementById("f"),err=document.getElementById("err");
-f.addEventListener("change",e=>{if(e.target.name==="plate"){const c=f.querySelectorAll("input[name=plate]:checked");if(c.length>2)e.target.checked=false}});
-f.addEventListener("submit",async e=>{e.preventDefault();
- const pain=f.querySelector("input[name=pain]:checked")?.value,plate=[...f.querySelectorAll("input[name=plate]:checked")].map(x=>x.value),email=f.email.value.trim();
- if(!pain){err.textContent="Pick a number from 1 to 5 first.";err.style.display="block";return}
- if(email&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent="That email doesn't look right.";err.style.display="block";return}
- err.style.display="none";
- const text=`How much this sounds like me: ${pain}/5\nTake off my plate first: ${plate.join(", ")||"-"}\nBeta email: ${email||"not now"}`;
- const ok=await (navigator.clipboard?navigator.clipboard.writeText(text).then(()=>true,()=>false):Promise.resolve(false));
- f.style.display="none";document.getElementById("done").style.display="block";
- document.getElementById("doneMsg").textContent=email?"Almost there. One step left.":"Thank you. This shapes what gets built next.";
- const hint=document.getElementById("doneHint"),row=document.getElementById("doneRow");
- if(BETA_FORM_URL){hint.textContent=ok?"Your answers are copied. Paste them into the sign-up form to finish.":"Open the sign-up form to finish.";row.innerHTML=`<a class="btn" target="_blank" rel="noreferrer" href="${BETA_FORM_URL}">Open the sign-up form</a>`}
- else if(ok){hint.textContent="Your answers are copied. Paste them into a message to whoever shared this with you."}
- else{hint.textContent="Copy your answers below and send them to whoever shared this with you.";const t=document.createElement("textarea");t.readOnly=true;t.rows=4;t.value=text;t.setAttribute("aria-label","Your answers");row.appendChild(t)}
+/* Beta sign-ups and feedback: FormSubmit emails each one to Ngan. */
+const TO = "nganph@protonmail.com";
+const ENDPOINT = "https://formsubmit.co/ajax/" + TO;
+const f = document.getElementById("f"), err = document.getElementById("err"), btn = document.getElementById("sendBtn");
+let kind = "beta";
+const setTab = (k) => {
+  kind = k; err.style.display = "none";
+  document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", String(b.dataset.tab === k)));
+  document.querySelectorAll("[data-for]").forEach(d => d.hidden = d.dataset.for !== k);
+  btn.textContent = k === "beta" ? "Join the beta" : "Send";
+  f.style.display = ""; document.getElementById("done").style.display = "none";
+};
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => setTab(b.dataset.tab)));
+document.querySelectorAll("[data-open]").forEach(a => a.addEventListener("click", () => setTab(a.dataset.open)));
+f.addEventListener("change", e => { if (e.target.name === "plate" && f.querySelectorAll("input[name=plate]:checked").length > 2) e.target.checked = false; });
+const okEmail = (e) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e);
+const fail = (m) => { err.textContent = m; err.style.display = "block"; };
+f.addEventListener("submit", async e => {
+  e.preventDefault();
+  if (f._honey.value) return;
+  let fields;
+  if (kind === "beta") {
+    const email = f.email.value.trim();
+    if (!okEmail(email)) return fail(email ? "That email doesn't look right." : "Add your email so we can send you an invite.");
+    fields = { Email: email, "Sounds like me (1-5)": f.querySelector("input[name=pain]:checked")?.value || "-", "Take off my plate first": [...f.querySelectorAll("input[name=plate]:checked")].map(x => x.value).join(", ") || "-" };
+  } else {
+    const note = f.note.value.trim(), reply = f.reply.value.trim();
+    if (!note) return fail("Write a line or two first.");
+    if (reply && !okEmail(reply)) return fail("That email doesn't look right.");
+    fields = { Feedback: note, "Reply to": reply || "-" };
+  }
+  err.style.display = "none"; btn.disabled = true; btn.textContent = "Sending…";
+  const subject = kind === "beta" ? "Chief of Staff: beta sign-up" : "Chief of Staff: feedback";
+  let ok = false;
+  try {
+    const res = await fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify({ _subject: subject, _template: "table", Source: "Landing page", ...fields }) });
+    const data = await res.json().catch(() => ({}));
+    ok = res.ok && (data.success === true || data.success === "true");
+  } catch { ok = false; }
+  btn.disabled = false; btn.textContent = kind === "beta" ? "Join the beta" : "Send";
+  f.style.display = "none"; document.getElementById("done").style.display = "block";
+  const msg = document.getElementById("doneMsg"), hint = document.getElementById("doneHint"), row = document.getElementById("doneRow");
+  row.innerHTML = "";
+  if (ok) {
+    msg.textContent = kind === "beta" ? "You're on the list. Thank you." : "Got it. Thank you.";
+    hint.textContent = kind === "beta" ? "We'll email you when the beta opens." : "Ngan reads every note.";
+  } else {
+    msg.textContent = "That didn't send.";
+    hint.textContent = "Your answers are ready in an email instead. Just press send. Or write to " + TO + ".";
+    const body = Object.entries(fields).map(([k, v]) => k + ": " + v).join("\n");
+    const a = document.createElement("a"); a.className = "btn"; a.textContent = "Open in your email app";
+    a.href = "mailto:" + TO + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    const back = document.createElement("button"); back.type = "button"; back.className = "btn ghost"; back.textContent = "Try again"; back.onclick = () => setTab(kind);
+    row.append(a, back);
+  }
 });
 </script></body></html>
