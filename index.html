@@ -22,6 +22,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.02em;text-wra
 h1{font-size:clamp(40px,6.4vw,76px);line-height:1.02}
 h2{font-size:clamp(32px,4.2vw,50px);line-height:1.08}
 h3{font-size:24px;line-height:1.25;font-weight:400}
+p,li,figcaption{text-wrap:pretty}
 p{margin:0}
 .lead{font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:#cfc9bc;max-width:60ch}
 .muted{color:var(--mist)}.small{font-size:13.5px;color:var(--fog)}
@@ -121,7 +122,7 @@ section{padding:96px 0}
 .tw table{min-width:720px}
 
 /* videos */
-.vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.vids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .vids figure{margin:0;min-width:0}
 .vids video{width:100%;border-radius:18px;border:1px solid var(--line2);background:#000;display:block}
 .vids figcaption{margin-top:12px}
@@ -202,7 +203,7 @@ footer a.note{color:var(--mist)}
 </style></head><body>
 <nav class="top" aria-label="Main"><div class="wrap">
  <a class="mark" href="#"><span class="orb" aria-hidden="true"></span><span class="word">Chief of Staff</span></a>
- <div class="links"><a class="t" href="#how">How it works</a><a class="t" href="#data">Your data</a><a class="btn ghost" data-demo href="demo/">Try the demo</a><a class="btn" href="#beta">Join the beta</a></div>
+ <div class="links"><a class="t" href="#how">How it works</a><a class="t" href="#yours">Make it yours</a><a class="t" href="#data">Your data</a><a class="btn ghost" data-demo href="demo/">Try the demo</a><a class="btn" href="#beta">Join the beta</a></div>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -260,22 +261,20 @@ footer a.note{color:var(--mist)}
 <section id="how" aria-labelledby="how-h"><div class="wrap">
  <div class="sec-head"><h2 id="how-h">One quiet app. Three jobs.</h2><p class="lead">It does the admin, speaks up at the right moment, and keeps your life in the picture.</p></div>
  <div class="cards">
-  <div class="card"><span class="k">Chief of staff</span><h3>The admin is done before you start.</h3><div class="imgs"><div class="crop"><img src="landing/card-busy.webp" alt="While you were busy: 3 done, 1 needs your OK" width="734" height="310"></div></div><p>Keep or undo with one tap. Anything others will see waits for your OK.</p></div>
-  <div class="card"><span class="k">Coach</span><h3>It catches the moment.</h3><div class="imgs"><div class="crop"><img src="landing/card-pattern.webp" alt="Hero mode: you're about to pick up a third fire. Show me a way out." width="734" height="356"></div><div class="crop"><img src="landing/card-growth.webp" alt="Hero mode down from 5 a week to 2" width="734" height="262"></div></div><p>Name the habit you want to break. It flags it kindly, as it happens.</p></div>
-  <div class="card"><span class="k">Life</span><h3>Work and life, side by side.</h3><div class="imgs"><div class="crop"><img src="landing/card-glance.webp" alt="This week: work goals 3 of 5, life goals 2 of 4" width="734" height="488"></div><div class="crop"><img src="landing/card-life.webp" alt="Life goals this week: swim twice, home for bedtime, lunch away from the desk" width="734" height="438"></div></div><p>Sleep, movement and mood from the apps you already use, if you want.</p></div>
+  <div class="card"><h3>The admin is done before you start.</h3><div class="imgs"><div class="crop"><img src="landing/card-busy.webp" alt="While you were busy: 3 done, 1 needs your OK" width="734" height="310"></div></div><p>Keep or undo with one tap. Anything others will see waits for your OK.</p></div>
+  <div class="card"><h3>It catches the moment.</h3><div class="imgs"><div class="crop"><img src="landing/card-pattern.webp" alt="Hero mode: you're about to pick up a third fire. Show me a way out." width="734" height="356"></div><div class="crop"><img src="landing/card-growth.webp" alt="Hero mode down from 5 a week to 2" width="734" height="262"></div></div><p>Name the habit you want to break. It flags it kindly, as it happens.</p></div>
+  <div class="card"><h3>Work and life, side by side.</h3><div class="imgs"><div class="crop"><img src="landing/card-glance.webp" alt="This week: work goals 3 of 5, life goals 2 of 4" width="734" height="488"></div><div class="crop"><img src="landing/card-life.webp" alt="Life goals this week: swim twice, home for bedtime, lunch away from the desk" width="734" height="438"></div></div><p>Sleep, movement and mood from the apps you already use, if you want.</p></div>
  </div>
 </div></section>
 
-<section aria-labelledby="yours-h" style="padding-top:24px"><div class="wrap">
- <div class="sec-head"><h2 id="yours-h">Yours, all the way.</h2></div>
- <div class="yours">
-  <div class="panel"><h3>Your tools</h3><p>Works with the calendar, notes, tasks and chat you already use.</p>
-   <div class="chips"><span class="chip on">Outlook</span><span class="chip">Google</span><span class="chip on">Teams</span><span class="chip">Slack</span><span class="chip on">Asana</span><span class="chip">Notion</span></div></div>
-  <div class="panel"><h3>Your AI</h3><p>Use the AI you already pay for, or run an open model yourself.</p>
-   <div class="chips"><span class="chip on">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">Self-hosted</span></div></div>
-  <div class="panel"><h3>Your wellbeing, optional</h3><p>Off until you turn it on. General coaching, not medical advice.</p>
-   <div class="chips"><span class="chip on">Apple Health</span><span class="chip">Health Connect</span><span class="chip">Oura</span><span class="chip">Garmin</span><span class="chip">Strava</span><span class="chip">Calm</span></div></div>
+<section id="yours" aria-labelledby="yours-h" style="padding-top:24px"><div class="wrap">
+ <div class="sec-head"><h2 id="yours-h">Calm on the surface. Powerful underneath.</h2><p class="lead">Make it yours. Day to day, you see one step at a time. When you want to dig in, everything is yours to set up.</p></div>
+ <div class="cards">
+  <div class="card"><h3>Plug in what you already use.</h3><div class="imgs"><div class="crop"><img src="landing/card-connections.webp" alt="Connections: tiles for Outlook, Slack, WhatsApp and more, each connected or ready to connect" width="734" height="333"></div></div><p>Calendar, chat, notes and tasks, or any tool with an MCP server. Pick a model for each job, or keep life data on your own device.</p></div>
+  <div class="card"><h3>Find the coach that works for you.</h3><div class="imgs"><div class="crop"><img src="landing/card-dials.webp" alt="Your style: Direct challenger, with dials for directness, challenge and warmth" width="734" height="390"></div><div class="crop"><img src="landing/card-reply.webp" alt="A sample reply that changes as you move the dials" width="516" height="300"></div></div><p>Six quick taps suggest a style. Then move five dials and watch the reply change.</p></div>
+  <div class="card"><h3>See where you're heading.</h3><div class="imgs"><div class="crop"><img src="landing/card-wheel.webp" alt="Life wheel: where Amara is now against where she wants to be" width="545" height="425" style="max-width:300px;margin:0 auto"></div><div class="crop"><img src="landing/card-gaps.webp" alt="Biggest gaps: Health 4 to 8, Fun 3 to 7, Mind 5 to 8" width="734" height="346"></div></div><p>Values, a life wheel and an 18-month vision, broken down to this week. Your coach helps you build it.</p></div>
  </div>
+ <div class="chips" style="justify-content:center;margin-top:26px"><span class="chip on">Outlook</span><span class="chip on">Teams</span><span class="chip">Slack</span><span class="chip on">Asana</span><span class="chip">Notion</span><span class="chip on">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span><span class="chip">Llama on your laptop</span><span class="chip">Apple Health</span><span class="chip">Oura</span><span class="chip">Your own MCP</span></div>
 </div></section>
 
 <section id="different" aria-labelledby="diff-h"><div class="wrap">
@@ -287,6 +286,9 @@ footer a.note{color:var(--mist)}
    <tr><th>Catches habits as they happen</th><td class="no">No</td><td class="no">No</td><td>Monthly</td><td class="us yes">In the moment</td></tr>
    <tr><th>Work and life together</th><td class="no">No</td><td class="no">No</td><td>Yes</td><td class="us yes">Yes</td></tr>
    <tr><th>Your own AI</th><td class="no">No</td><td>Some</td><td class="no">n/a</td><td class="us yes">Yes, or self-hosted</td></tr>
+   <tr><th>A model for each job</th><td class="no">No</td><td class="no">No</td><td class="no">n/a</td><td class="us yes">Yes</td></tr>
+   <tr><th>Any tool, via MCP</th><td class="no">No</td><td>Some</td><td class="no">n/a</td><td class="us yes">Yes</td></tr>
+   <tr><th>Helps you find your coaching style</th><td class="no">No</td><td class="no">No</td><td>Over time</td><td class="us yes">In 2 minutes</td></tr>
   </tbody>
  </table></div>
 </div></section>
@@ -303,10 +305,11 @@ footer a.note{color:var(--mist)}
 </div></section>
 
 <section id="watch" data-hosted-only aria-labelledby="watch-h" style="padding-top:24px"><div class="wrap">
- <div class="sec-head"><h2 id="watch-h">Watch Amara's week in a minute.</h2></div>
+ <div class="sec-head"><h2 id="watch-h">Watch Amara's week.</h2></div>
  <div class="vids">
   <figure><video controls preload="metadata" playsinline data-v="coach" poster="landing/poster-coach-desktop.webp" src="videos/amara-coach-desktop.mp4"></video><figcaption><b>The coach</b><p class="small">The third yes, a better reply, and a pattern going down.</p></figcaption></figure>
   <figure><video controls preload="metadata" playsinline data-v="chief-of-staff" poster="landing/poster-chief-of-staff-desktop.webp" src="videos/amara-chief-of-staff-desktop.mp4"></video><figcaption><b>The chief of staff</b><p class="small">Admin done before she starts, 1:1 prep, actions and the Friday update.</p></figcaption></figure>
+  <figure><video controls preload="metadata" playsinline data-v="make-it-yours" poster="landing/poster-make-it-yours-desktop.webp" src="videos/amara-make-it-yours-desktop.mp4"></video><figcaption><b>Make it yours</b><p class="small">Connect a tool, find a coaching style and see her north star.</p></figcaption></figure>
  </div>
 </div></section>
 
